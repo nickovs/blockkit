@@ -102,9 +102,9 @@ class Component:
                 result[name] = value
         return result
 
-    def json(self):
+    def json(self, indent=None):
         """Convert structure to a JSON representation"""
-        return json.dumps(self.asdict())
+        return json.dumps(self.asdict(), indent=indent)
 
 
 class Element(Component):

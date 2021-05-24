@@ -46,3 +46,13 @@ Python strings can be used where plain Text structures are expected.
 Get the JSON representation by calling the json() method on your top level object,
 or get the dictionary representation by calling asdict().
 
+
+
+To Do List
+----------
+
+While the functionality of this module is fairly complete, the project itself still needs a little
+work. Specifically it still needs:
+
+- Unit tests
+- Better examples

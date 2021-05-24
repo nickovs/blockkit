@@ -18,7 +18,11 @@ from .components import Text, Option, OptionGroup, ConversationFilter, DispatchA
 
 # Elements used inside block layouts
 class Button(Element):
-    """An interactive component that inserts a button."""
+    """An interactive component that inserts a button.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#button>`
+    for details.
+    """
     text: Text
     action_id: str
     url: str = None
@@ -28,7 +32,11 @@ class Button(Element):
 
 
 class Checkboxes(Element):
-    """A checkbox group that allows multiple choices from a list of options."""
+    """A checkbox group that allows multiple choices from a list of options.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#checkboxes>`
+    for details.
+    """
     action_id: str
     options: List[Option]
     initial_options: List[Option] = None
@@ -36,7 +44,11 @@ class Checkboxes(Element):
 
 
 class DatePicker(Element):
-    """An element which lets users easily select a date from a calendar style UI."""
+    """An element which lets users easily select a date from a calendar style UI.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#datepicker>`
+    for details.
+    """
     action_id: str
     placeholder: Text
     initial_date: str = None
@@ -44,13 +56,22 @@ class DatePicker(Element):
 
 
 class Image(Element):
-    """An element to insert an image as part of a larger block of content."""
+    """An element to insert an image as part of a larger block of content.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#image>`
+    for details.
+    """
     image_url: str
     alt_text: str
 
 
 class MultiStaticSelect(Element):
-    """A menu that allows multiple selections from a static list."""
+    """A menu that allows multiple selections from a static list.
+
+    See the
+    `Slack API <https://api.slack.com/reference/block-kit/block-elements#static_multi_select>`
+    for details.
+    """
     _type = "multi_static_select"
     placeholder: Text
     action_id: str
@@ -62,7 +83,12 @@ class MultiStaticSelect(Element):
 
 
 class MultiExternalSelect(Element):
-    """A menu that allows multiple selections from a externally sourced list."""
+    """A menu that allows multiple selections from a externally sourced list.
+
+    See the
+    `Slack API <https://api.slack.com/reference/block-kit/block-elements#external_multi_select>`
+    for details.
+    """
     _type = "multi_external_select"
     placeholder: Text
     action_id: str
@@ -73,7 +99,12 @@ class MultiExternalSelect(Element):
 
 
 class MultiUsersSelect(Element):
-    """A menu that allows multiple selections from a list of users."""
+    """A menu that allows multiple selections from a list of users.
+
+    See the
+    `Slack API <https://api.slack.com/reference/block-kit/block-elements#users_multi_select>`
+    for details.
+    """
     _type = "multi_users_select"
     placeholder: Text
     action_id: str
@@ -83,7 +114,12 @@ class MultiUsersSelect(Element):
 
 
 class MultiConversationsSelect(Element):
-    """A menu that allows multiple selections from a list of conversations."""
+    """A menu that allows multiple selections from a list of conversations.
+
+    See the
+    `Slack API <https://api.slack.com/reference/block-kit/block-elements#conversation_multi_select>`
+    for details.
+    """
     _type = "multi_conversations_select"
     placeholder: Text
     action_id: str
@@ -95,7 +131,12 @@ class MultiConversationsSelect(Element):
 
 
 class MultiChannelsSelect(Element):
-    """A menu that allows multiple selections from a list of channels."""
+    """A menu that allows multiple selections from a list of channels.
+
+    See the
+    `Slack API <https://api.slack.com/reference/block-kit/block-elements#channel_multi_select>`
+    for details.
+    """
     _type = "multi_channels_select"
     placeholder: Text
     action_id: str
@@ -105,14 +146,22 @@ class MultiChannelsSelect(Element):
 
 
 class Overflow(Element):
-    """A popup menu presented off to the side."""
+    """A popup menu presented off to the side.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#overflow>`
+    for details.
+    """
     action_id: str
     options: List[Option]
     confirm: Confirm = None
 
 
 class PlainTextInput(Element):
-    """A plain-text input, similar to the HTML <input> tag."""
+    """A plain-text input, similar to the HTML <input> tag.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#input>`
+    for details.
+    """
     _type = "plain_text_input"
     action_id: str
     placeholder: Text
@@ -124,7 +173,11 @@ class PlainTextInput(Element):
 
 
 class RadioButtons(Element):
-    """A radio button group that allows choice of one item from a list of options."""
+    """A radio button group that allows choice of one item from a list of options.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#radio>`
+    for details.
+    """
     _type = "radio_buttons"
     action_id: str
     options: List[Option]
@@ -133,7 +186,11 @@ class RadioButtons(Element):
 
 
 class StaticSelect(Element):
-    """A single-selection menu from a static list."""
+    """A single-selection menu from a static list.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#static_select>`
+    for details.
+    """
     _type = "static_select"
     placeholder: Text
     action_id: str
@@ -144,7 +201,11 @@ class StaticSelect(Element):
 
 
 class ExternalSelect(Element):
-    """A single-selection menu from an externally sourced list."""
+    """A single-selection menu from an externally sourced list.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#external_select>`
+    for details.
+    """
     _type = "external_select"
     placeholder: Text
     action_id: str
@@ -154,7 +215,11 @@ class ExternalSelect(Element):
 
 
 class UsersSelect(Element):
-    """A single-selection menu from a list of users."""
+    """A single-selection menu from a list of users.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#users_select>`
+    for details.
+    """
     _type = "users_select"
     placeholder: Text
     action_id: str
@@ -163,7 +228,12 @@ class UsersSelect(Element):
 
 
 class ConversationsSelect(Element):
-    """A single-selection menu from a list of conversations."""
+    """A single-selection menu from a list of conversations.
+
+    See the
+    `Slack API <https://api.slack.com/reference/block-kit/block-elements#conversation_select>`
+    for details.
+    """
     _type = "conversations_select"
     placeholder: Text
     action_id: str
@@ -175,7 +245,11 @@ class ConversationsSelect(Element):
 
 
 class ChannelsSelect(Element):
-    """A single-selection menu from a list of channels."""
+    """A single-selection menu from a list of channels.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#channel_select>`
+    for details.
+    """
     _type = "channels_select"
     placeholder: Text
     action_id: str
@@ -185,7 +259,11 @@ class ChannelsSelect(Element):
 
 
 class TimePicker(Element):
-    """An element which allows selection of a time of day."""
+    """An element which allows selection of a time of day.
+
+    See the `Slack API <https://api.slack.com/reference/block-kit/block-elements#timepicker>`
+    for details.
+    """
     placeholder: Text
     action_id: str
     initial_time: str = None

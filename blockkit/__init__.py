@@ -17,5 +17,6 @@ from .elements import (
     PlainTextInput, RadioButtons, StaticSelect, ExternalSelect, UsersSelect, ConversationsSelect,
     ChannelsSelect, TimePicker )
 from .blocks import Actions, Context, Divider, File, Header, ImageBlock, Input, Section
+from .messages import Message
 
 __version__ = "0.2.0"
